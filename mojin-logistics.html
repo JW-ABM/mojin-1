@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO 核心三件套 -->
+  <title>东京搬家 | 世田谷·新宿·杉并 华人搬家服务 | 墨金物流</title>
+  <meta name="description" content="东京地区专业华人搬家，覆盖东京23区及周边。提供单件搬运、整屋搬迁、退租搬家、家具拆装服务。华人师傅，价格透明，中文沟通无障碍。LINE / 微信 / WhatsApp 均可联系。">
+  <meta name="keywords" content="东京搬家,日本华人搬家,东京物流,新宿搬家,世田谷搬家,杉并搬家,退租搬迁,日本搬家,东京单件搬运">
+
+  <!-- Open Graph（微信/LINE 分享时显示） -->
+  <meta property="og:title" content="东京华人搬家 | 墨金物流">
+  <meta property="og:description" content="东京23区专业华人搬家服务，华人师傅，中文沟通，价格透明。LINE / 微信 / WhatsApp 随时咨询。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- 结构化数据（帮助谷歌理解业务信息） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "墨金物流",
+    "description": "东京地区专业华人搬家物流服务",
+    "areaServed": "Tokyo, Japan",
+    "availableLanguage": ["Chinese", "Japanese"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "Chinese"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --warm-cream: #FDF8F2;
+      --warm-bg: #FFF9F3;
+      --accent-orange: #E8632A;
+      --accent-gold: #C9922A;
+      --accent-light: #FAF0E4;
+      --text-dark: #1A1410;
+      --text-mid: #4A3728;
+      --text-muted: #8A7060;
+      --border: #E8D8C8;
+      --white: #FFFFFF;
+      --section-gap: 5rem;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--warm-bg);
+      color: var(--text-dark);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,248,242,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--accent-orange);
+      letter-spacing: 0.05em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent-orange); }
+    .nav-cta {
+      background: var(--accent-orange);
+      color: white;
+      padding: 0.45rem 1.2rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #c9521f; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 2rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      gap: 3rem;
+    }
+    .hero-text { flex: 1; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent-orange);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2rem;
+      border: 1px solid #F0C090;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .hero h1 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--accent-orange); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+      max-width: 480px;
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--accent-orange);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .btn-primary:hover { background: #c9521f; transform: translateY(-1px); }
+    .btn-secondary {
+      border: 1.5px solid var(--accent-orange);
+      color: var(--accent-orange);
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      background: transparent;
+    }
+    .btn-secondary:hover { background: var(--accent-light); }
+    .hero-visual {
+      flex: 0 0 340px;
+      background: var(--white);
+      border-radius: 1.5rem;
+      border: 1px solid var(--border);
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(232,99,42,0.08);
+    }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .stat-card {
+      background: var(--warm-cream);
+      border-radius: 1rem;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+    }
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .hero-quote {
+      margin-top: 1.5rem;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent-orange);
+      border-radius: 0 0.8rem 0.8rem 0;
+      padding: 1rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      font-style: italic;
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: var(--section-gap) 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: var(--accent-orange);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.8rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      padding: 1.8rem;
+      transition: all 0.25s;
+    }
+    .service-card:hover {
+      border-color: var(--accent-orange);
+      box-shadow: 0 4px 20px rgba(232,99,42,0.1);
+      transform: translateY(-3px);
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-light);
+      border-radius: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark); }
+    .service-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+    .service-price {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: var(--accent-light);
+      color: var(--accent-orange);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.2rem 0.7rem;
+      border-radius: 1rem;
+    }
+
+    /* ── PRICING ── */
+    #pricing { background: var(--warm-cream); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .price-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      position: relative;
+    }
+    .price-card.featured {
+      border-color: var(--accent-orange);
+      box-shadow: 0 4px 24px rgba(232,99,42,0.12);
+    }
+    .price-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent-orange);
+      color: white;
+      font-size: 0.75rem;
+      padding: 0.25rem 1rem;
+      border-radius: 1rem;
+      white-space: nowrap;
+    }
+    .price-name { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .price-amount {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .price-amount span { font-size: 0.9rem; font-weight: 400; color: var(--text-muted); }
+    .price-list {
+      list-style: none;
+      margin: 1.2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .price-list li {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .price-list li::before { content: "✓"; color: var(--accent-orange); font-weight: 700; flex-shrink: 0; }
+    .price-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── HOW IT WORKS ── */
+    #process { background: var(--white); }
+    .steps { display: flex; flex-direction: column; gap: 0; max-width: 680px; }
+    .step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      position: relative;
+    }
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 48px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: var(--border);
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      background: var(--accent-light);
+      border: 2px solid var(--accent-orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      color: var(--accent-orange);
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .step-content { padding-bottom: 2.5rem; }
+    .step-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--text-dark); }
+    .step-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── MAP / AREA ── */
+    #area { background: var(--warm-cream); }
+    .area-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .area-map {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      overflow: hidden;
+    }
+    .area-map iframe {
+      width: 100%;
+      height: 360px;
+      border: none;
+      display: block;
+      filter: saturate(0.8) sepia(0.1);
+    }
+    .area-list { display: flex; flex-direction: column; gap: 0.8rem; }
+    .area-tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      padding: 0.8rem 1rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .area-tag span { color: var(--accent-orange); font-size: 0.78rem; }
+
+    /* ── REVIEWS ── */
+    #reviews { background: var(--white); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-card {
+      background: var(--warm-bg);
+      border: 1px solid var(--border);
+      border-radius: 1.2rem;
+      padding: 1.6rem;
+    }
+    .review-stars { color: var(--accent-gold); font-size: 1rem; margin-bottom: 0.8rem; letter-spacing: 0.1em; }
+    .review-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1rem; font-style: italic; }
+    .review-author { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--accent-orange); }
+    #contact .container { text-align: center; }
+    #contact .section-label { color: rgba(255,255,255,0.7); }
+    #contact .section-title { color: white; }
+    #contact .section-desc { color: rgba(255,255,255,0.8); margin: 0 auto 2.5rem; max-width: 480px; }
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      background: white;
+      color: var(--accent-orange);
+      padding: 0.9rem 1.8rem;
+      border-radius: 2rem;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      border: 2px solid white;
+      line-height: 1;
+    }
+    .contact-btn svg { flex-shrink: 0; }
+    .contact-btn:hover { background: transparent; color: white; }
+    .contact-btn:hover svg { stroke: white; }
+    .contact-btn.outline {
+      background: white;
+      color: var(--accent-orange);
+      border-color: white;
+    }
+    .contact-btn.outline svg { stroke: var(--accent-orange); }
+    .contact-btn.outline:hover { background: transparent; color: white; border-color: rgba(255,255,255,0.6); }
+    .contact-btn.outline:hover svg { stroke: white; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; padding: 4rem 1.5rem 3rem; min-height: auto; }
+      .hero-visual { flex: none; width: 100%; }
+      .nav-links { display: none; }
+      .area-layout { grid-template-columns: 1fr; }
+      section { padding: 3.5rem 1.5rem; }
+      .hero-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── 导航 ── -->
+<nav>
+  <div class="nav-logo">墨金物流</div>
+  <ul class="nav-links">
+    <li><a href="#services">服务</a></li>
+    <li><a href="#pricing">收费</a></li>
+    <li><a href="#process">流程</a></li>
+    <li><a href="#area">覆盖区域</a></li>
+    <li><a href="#reviews">评价</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">立即咨询</a>
+</nav>
+
+<!-- ── Hero ── -->
+<div class="hero container">
+  <div class="hero-text">
+    <div class="hero-badge">🚛 东京 23 区全覆盖</div>
+    <h1>在东京搬家，<br>就找<span>墨金物流</span></h1>
+    <p class="hero-sub">华人师傅，中文沟通，价格透明。无论退租搬迁还是单件搬运，我们都能帮您轻松搞定。</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">📱 立即获取报价</a>
+      <a href="#services" class="btn-secondary">了解服务详情</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">服务客户</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">23区</div>
+        <div class="stat-label">覆盖范围</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4.9⭐</div>
+        <div class="stat-label">客户评分</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">当天</div>
+        <div class="stat-label">可约上门</div>
+      </div>
+    </div>
+    <div class="hero-quote">
+      "第一次在日本搬家，完全不知道怎么弄，华人师傅全程帮我搞定，太省心了！"<br>
+      <strong style="color:var(--accent-orange)">— 小雨，新宿区</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ── 服务项目 ── -->
+<section id="services">
+  <div class="container">
+    <div class="section-label">服务项目</div>
+    <h2 class="section-title">我们能帮您做什么</h2>
+    <p class="section-desc">无论大小搬迁，一律提供专业服务，绝不含糊。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>整屋搬家</h3>
+        <p>一居室到大型公寓均可承接，专业打包、搬运、归位一条龙。退租清洁也可安排。</p>
+        <span class="service-price">按户型报价</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📦</div>
+        <h3>单件搬运</h3>
+        <p>沙发、冰箱、洗衣机、大件家电，单件也接。不需要整屋搬，省钱省力。</p>
+        <span class="service-price">按件计费</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>家具拆装</h3>
+        <p>IKEA 及各品牌家具拆解、运输、重新组装，精准还原，保证不剩螺丝。</p>
+        <span class="service-price">另行报价</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚪</div>
+        <h3>退租搬迁</h3>
+        <p>熟悉日本租房退租流程，协助清场、打包，对接清洁公司，让押金退得顺利。</p>
+        <span class="service-price">综合报价</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>急单当天搬</h3>
+        <p>急事不用怕，联系我们确认档期后，最快当天上门，帮您解决燃眉之急。</p>
+        <span class="service-price">加急费另议</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📮</div>
+        <h3>同城配送</h3>
+        <p>二手物品转让、网购大件、活动物资配送，东京23区内快速点对点配送。</p>
+        <span class="service-price">按距离计费</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 收费说明 ── -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-label">收费说明</div>
+    <h2 class="section-title">价格透明，没有隐藏收费</h2>
+    <p class="section-desc">报价前免费咨询，确认后才收费，搬完满意再付款。</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">单件搬运</div>
+        <div class="price-amount">¥5,000 <span>起</span></div>
+        <ul class="price-list">
+          <li>沙发、冰箱、洗衣机等大件</li>
+          <li>限东京23区内</li>
+          <li>含搬上搬下（4楼以内无电梯）</li>
+          <li>含基础防护包装</li>
+        </ul>
+        <p class="price-note">※ 具体价格按件数、距离、楼层而定，联系我们获取准确报价。</p>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">最受欢迎</div>
+        <div class="price-name">整屋搬家（1LDK）</div>
+        <div class="price-amount">¥20,000 <span>起</span></div>
+        <ul class="price-list">
+          <li>专业打包耗材全包</li>
+          <li>2名师傅上门</li>
+          <li>含家具拆装</li>
+          <li>含垃圾袋装箱协助</li>
+          <li>可选退租清洁服务</li>
+        </ul>
+        <p class="price-note">※ 2LDK起另行报价，欢迎发照片评估。</p>
+      </div>
+      <div class="price-card">
+        <div class="price-name">家具拆装单独</div>
+        <div class="price-amount">¥3,000 <span>起/件</span></div>
+        <ul class="price-list">
+          <li>IKEA 及各大品牌</li>
+          <li>仅拆或仅装均可</li>
+          <li>完工后现场清理</li>
+          <li>不收上门费</li>
+        </ul>
+        <p class="price-note">※ 复杂款式（如书柜、衣柜）另议。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 服务流程 ── -->
+<section id="process">
+  <div class="container">
+    <div class="section-label">服务流程</div>
+    <h2 class="section-title">4 步搞定，省心省力</h2>
+    <p class="section-desc">从联系到搬完，全程中文沟通，绝不让您一头雾水。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">联系我们，说清楚需求</div>
+          <div class="step-desc">LINE、微信、WhatsApp 都可以。告诉我们搬家地址、大致物品量、希望的日期，发几张照片更方便报价。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">免费报价，确认方案</div>
+          <div class="step-desc">我们根据您的情况给出明确报价，没有隐藏费用。您确认后，预约具体上门时间。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">师傅上门，专业搬运</div>
+          <div class="step-desc">华人师傅准时上门，全程中文沟通。物品包装、搬运、装车、到达后归位，我们全包。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">确认无误，付款完成</div>
+          <div class="step-desc">到达新住所，您确认所有物品完好无损后再付款。支持现金、银行转账、PayPay。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 覆盖区域 ── -->
+<section id="area">
+  <div class="container">
+    <div class="section-label">覆盖区域</div>
+    <h2 class="section-title">东京 23 区及周边，全覆盖</h2>
+    <p class="section-desc">以下是我们重点服务的区域，其他区域也可咨询，一般均可安排。</p>
+    <div class="area-layout">
+      <div class="area-map">
+        <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:360px;display:block;background:#FDF6EE;">
+          <!-- 背景装饰 -->
+          <rect width="420" height="360" fill="#FDF6EE"/>
+          <!-- 隅田川 -->
+          <path d="M260,20 Q270,60 265,100 Q260,140 270,180 Q280,220 275,260 Q270,300 280,340" stroke="#B8D4E8" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <!-- 荒川 -->
+          <path d="M300,10 Q310,60 308,110 Q306,160 312,210 Q318,260 315,340" stroke="#B8D4E8" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+          <!-- 区块：新宿 -->
+          <rect x="120" y="130" width="80" height="60" rx="8" fill="#FAE4D4" stroke="#E8632A" stroke-width="2"/>
+          <text x="160" y="158" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="13" font-weight="700" fill="#C94E1A">新宿区</text>
+          <text x="160" y="175" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#E8632A">★ 热门</text>
+
+          <!-- 区块：世田谷 -->
+          <rect x="60" y="210" width="90" height="60" rx="8" fill="#FAE4D4" stroke="#E8632A" stroke-width="2"/>
+          <text x="105" y="238" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="13" font-weight="700" fill="#C94E1A">世田谷区</text>
+          <text x="105" y="255" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#E8632A">★ 热门</text>
+
+          <!-- 区块：杉并 -->
+          <rect x="55" y="135" width="75" height="55" rx="8" fill="#FAE4D4" stroke="#E8632A" stroke-width="2"/>
+          <text x="92" y="160" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="13" font-weight="700" fill="#C94E1A">杉并区</text>
+          <text x="92" y="177" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#E8632A">★ 热门</text>
+
+          <!-- 区块：港 -->
+          <rect x="188" y="200" width="65" height="50" rx="8" fill="#FFF0E8" stroke="#D4845A" stroke-width="1.5"/>
+          <text x="220" y="223" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="12" font-weight="700" fill="#A0522D">港区</text>
+          <text x="220" y="238" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C47A50">六本木</text>
+
+          <!-- 区块：渋谷 -->
+          <rect x="145" y="195" width="55" height="48" rx="8" fill="#FFF0E8" stroke="#D4845A" stroke-width="1.5"/>
+          <text x="172" y="218" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="12" font-weight="700" fill="#A0522D">渋谷区</text>
+          <text x="172" y="233" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C47A50">代代木</text>
+
+          <!-- 区块：文京 -->
+          <rect x="210" y="110" width="65" height="50" rx="8" fill="#FFF0E8" stroke="#D4845A" stroke-width="1.5"/>
+          <text x="242" y="133" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="12" font-weight="700" fill="#A0522D">文京区</text>
+          <text x="242" y="148" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C47A50">本郷</text>
+
+          <!-- 区块：中野 -->
+          <rect x="60" y="88" width="68" height="48" rx="8" fill="#FFF0E8" stroke="#D4845A" stroke-width="1.5"/>
+          <text x="94" y="110" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="12" font-weight="700" fill="#A0522D">中野区</text>
+          <text x="94" y="126" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C47A50">方南</text>
+
+          <!-- 其他区淡显 -->
+          <rect x="210" y="55" width="55" height="44" rx="6" fill="#F5EDE6" stroke="#DCC0A8" stroke-width="1"/>
+          <text x="237" y="75" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#B89070">豊島区</text>
+          <text x="237" y="89" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C8A888">池袋</text>
+
+          <rect x="280" y="110" width="55" height="44" rx="6" fill="#F5EDE6" stroke="#DCC0A8" stroke-width="1"/>
+          <text x="307" y="130" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#B89070">台東区</text>
+          <text x="307" y="144" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C8A888">浅草</text>
+
+          <rect x="280" y="165" width="55" height="44" rx="6" fill="#F5EDE6" stroke="#DCC0A8" stroke-width="1"/>
+          <text x="307" y="185" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="11" fill="#B89070">墨田区</text>
+          <text x="307" y="199" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="9" fill="#C8A888">押上</text>
+
+          <!-- 指南针 -->
+          <g transform="translate(385,25)">
+            <circle r="16" fill="white" stroke="#E8D0B8" stroke-width="1"/>
+            <text x="0" y="-5" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="700" fill="#E8632A">N</text>
+            <polygon points="0,-14 3,-2 0,2 -3,-2" fill="#E8632A"/>
+            <polygon points="0,14 3,2 0,-2 -3,2" fill="#C8B8A8"/>
+          </g>
+
+          <!-- 标题标签 -->
+          <rect x="10" y="10" width="130" height="28" rx="14" fill="#E8632A"/>
+          <text x="75" y="28" text-anchor="middle" font-family="Noto Sans SC,sans-serif" font-size="12" font-weight="700" fill="white">东京 23 区服务范围</text>
+
+          <!-- 图例 -->
+          <rect x="10" y="310" width="10" height="10" rx="2" fill="#FAE4D4" stroke="#E8632A" stroke-width="1.5"/>
+          <text x="25" y="320" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#8A7060">重点服务区</text>
+          <rect x="110" y="310" width="10" height="10" rx="2" fill="#FFF0E8" stroke="#D4845A" stroke-width="1"/>
+          <text x="125" y="320" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#8A7060">常规服务区</text>
+          <path d="M215,315 Q225,310 235,315" stroke="#B8D4E8" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <text x="242" y="320" font-family="Noto Sans SC,sans-serif" font-size="10" fill="#8A7060">河川</text>
+        </svg>
+      </div>
+      <div>
+        <div class="area-list">
+          <div class="area-tag">🏙️ 新宿区 <span>华人聚居热门区</span></div>
+          <div class="area-tag">🌳 世田谷区 <span>住宅区首选</span></div>
+          <div class="area-tag">🍀 杉并区 <span>高频服务区域</span></div>
+          <div class="area-tag">🗼 港区 <span>含六本木/麻布</span></div>
+          <div class="area-tag">🌸 渋谷区 <span>含代代木/原宿</span></div>
+          <div class="area-tag">🏯 文京区 <span>含本郷/小石川</span></div>
+          <div class="area-tag">🚉 中野区 <span>含方南/野方</span></div>
+          <div class="area-tag">📍 其他区域 <span>均可咨询安排</span></div>
+        </div>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:1.2rem;">
+          ※ 东京23区外（神奈川、埼玉、千叶等）也可安排，距离较远会有附加费用，请联系我们确认。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 客户评价 ── -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-label">客户评价</div>
+    <h2 class="section-title">客户说话，比我们说更可信</h2>
+    <p class="section-desc">以下是真实客户的反馈，我们不修改原文。</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"刚来日本，完全摸不着头脑，联系了墨金之后，从打包到搬运全程帮我安排好了，比我想的省钱多了，绝对会推荐给朋友！"</p>
+        <div class="review-author">— 晓楠，2024年 · 世田谷区</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"退租那天时间很紧，当天早上联系，下午就来了。师傅手脚很利索，钢琴也搬得稳稳的，真的很专业。"</p>
+        <div class="review-author">— 阿明，2024年 · 新宿区</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"IKEA 的组合大衣柜拆装，两个人不到两小时搞定，没有缺漏，价格也合理。中文沟通完全没问题，下次搬家还会来找。"</p>
+        <div class="review-author">— 小颖，2023年 · 杉并区</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"因为工作原因紧急搬家，报价清楚没有乱收费，搬完还帮我把纸箱整理好，超出预期的服务，很暖心！"</p>
+        <div class="review-author">— 老李，2024年 · 港区</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"朋友推荐的，原本以为贵，没想到比日本搬家公司便宜很多，而且全程中文，不用担心语言不通。强烈推荐！"</p>
+        <div class="review-author">— 玲玲，2024年 · 渋谷区</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"两个小时搬完一室一厅，效率极高。家里的冰箱和洗衣机都包装得很好，一点磕碰都没有，放心交给他们！"</p>
+        <div class="review-author">— 大伟，2023年 · 文京区</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 联系 ── -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">联系我们</div>
+    <h2 class="section-title">随时联系，免费报价</h2>
+    <p class="section-desc">选一个您最方便的方式，我们通常在30分钟内回复。</p>
+    <div class="contact-methods">
+      <a href="tel:+81-XXXXXXXXXX" class="contact-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 12 19.79 19.79 0 0 1 1.09 3.38 2 2 0 0 1 3.08 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+        电话 / WhatsApp
+      </a>
+      <a href="https://line.me/ti/p/XXXXXXXX" class="contact-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        LINE 联系
+      </a>
+      <a href="weixin://dl/business" class="contact-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M12 2C6.48 2 2 6.02 2 11c0 2.76 1.28 5.23 3.3 6.94L4 22l4.36-1.59A10.66 10.66 0 0 0 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+        微信：MOJIN_TOKYO
+      </a>
+      <a href="mailto:info@mojin-logistics.jp" class="contact-btn outline">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        发邮件
+      </a>
+    </div>
+    <p style="color:rgba(255,255,255,0.6); font-size:0.82rem; margin-top:2rem;">营业时间：每日 8:00 – 20:00，节假日也可咨询</p>
+  </div>
+</section>
+
+<!-- ── 页脚 ── -->
+<footer>
+  <p><strong>墨金物流</strong> — 东京华人搬家服务</p>
+  <p style="margin-top:0.4rem">© 2025 墨金物流 | 服务覆盖东京23区及周边 | 沪ICP备XXXXXXXX号</p>
+</footer>
+
+</body>
+</html>
